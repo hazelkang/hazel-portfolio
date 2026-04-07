@@ -127,13 +127,16 @@ function Home({ setActive }) {
           <br />
           <span className="text-gray-900">Hyeseung Kang</span>
         </h1>
-        <p className="text-lg md:text-xl text-gray-500 leading-relaxed max-w-2xl mx-auto mb-8">
-          Mixed methods researcher translating complex user behavior into actionable insights with <span className="font-semibold" style={{ color: C.indigo }}>AI/LLM tools</span>, <span className="font-semibold" style={{ color: C.teal }}>experimentation</span>, and <span className="font-semibold" style={{ color: C.coral }}>cross-functional collaboration</span>.
+        <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-2xl mx-auto mb-2">
+          Academic Business Researcher
+        </p>
+        <p className="text-sm md:text-base text-gray-400 leading-relaxed max-w-2xl mx-auto mb-8">
+          PhD Candidate in Business, Information Systems at Questrom School of Business — BU
         </p>
 
         <div className="flex flex-wrap justify-center gap-3 mb-10">
-          {["UX Researcher", "Information Systems", "10+ Years Experience", "5 Countries"].map((t, i) => (
-            <Tag key={i} color={[C.indigo, C.teal, C.coral, C.amber][i]}>{t}</Tag>
+          {["UX Researcher", "Information Systems", "10+ Years Experience"].map((t, i) => (
+            <Tag key={i} color={[C.indigo, C.teal, C.coral][i]}>{t}</Tag>
           ))}
         </div>
 
