@@ -189,7 +189,7 @@ function About() {
               I'm a PhD candidate at Boston University's Questrom School of Business, researching <span className="font-semibold" style={{ color: C.indigo }}>digital persuasion</span> and <span className="font-semibold" style={{ color: C.teal }}>user behavior in online communities</span>.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Before academia, I spent two years at Kantar Korea as a UX Researcher and Project Manager, leading mixed-methods research for Fortune 500 clients including Google, YouTube, Heineken, and Shilla Duty Free across 5 countries.
+              Before academia, I spent two years at Kantar Korea as a UX Researcher and Project Manager, leading mixed-methods research for Fortune 500 clients including Google, YouTube, Heineken, and Shilla Duty Free across 4 countries.
             </p>
             <p className="text-gray-600 leading-relaxed">
               I bridge rigorous research with real-world product and policy decisions. Fluent in English and Korean.
@@ -206,18 +206,17 @@ function About() {
                 <p className="text-xs uppercase tracking-widest font-medium mb-2" style={{ color: C.amber }}>Places I've Lived</p>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    { place: "USA — Boston, MA & NJ", color: C.indigo },
-                    { place: "South Korea — Seoul", color: C.coral },
-                    { place: "Germany — Bonn", color: C.amber },
-                    { place: "Singapore", color: C.teal },
-                    { place: "India — New Delhi", color: C.violet },
+                    { place: "🇺🇸 USA — Boston, MA & NJ", color: C.indigo },
+                    { place: "🇰🇷 South Korea — Seoul", color: C.coral },
+                    { place: "🇩🇪 Germany — Bonn", color: C.amber },
+                    { place: "🇮🇳 India — New Delhi", color: C.violet },
                   ].map((p, i) => <Tag key={i} color={p.color}>{p.place}</Tag>)}
                 </div>
               </div>
               <div>
                 <p className="text-xs uppercase tracking-widest font-medium mb-2" style={{ color: C.violet }}>Interests & Hobbies</p>
                 <div className="flex flex-wrap gap-2">
-                  {["Travel", "AR/VR (Meta Quest daily user)", "Cross-Cultural Exploration"].map((h, i) => <Tag key={i} color={C.violet}>{h}</Tag>)}
+                  {["✈️ Travel", "🥾 Hiking", "🥽 AR/VR (Meta Quest daily user)", "🌍 Cross-Cultural Exploration"].map((h, i) => <Tag key={i} color={C.violet}>{h}</Tag>)}
                 </div>
               </div>
             </div>
