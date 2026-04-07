@@ -113,80 +113,8 @@ function Home({ setActive }) {
         <div className="flex justify-center mb-6">
           <div className="relative">
             <div className="w-36 h-36 md:w-44 md:h-44 rounded-full p-1" style={{ background: GRAD.hero }}>
-              <div className="w-full h-full rounded-full border-4 border-white overflow-hidden"
-                style={{ background: "linear-gradient(145deg, #d4b08c 0%, #c9a070 100%)" }}>
-                <svg viewBox="0 0 200 200" width="100%" height="100%">
-                  <defs>
-                    <linearGradient id="hg" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#231510"/><stop offset="100%" stopColor="#110a06"/>
-                    </linearGradient>
-                    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#d4b08c"/><stop offset="100%" stopColor="#c9a070"/>
-                    </linearGradient>
-                    <radialGradient id="skin" cx="50%" cy="40%" r="50%">
-                      <stop offset="0%" stopColor="#fce4d0"/><stop offset="100%" stopColor="#f0ccb0"/>
-                    </radialGradient>
-                    <radialGradient id="blush" cx="50%" cy="50%" r="50%">
-                      <stop offset="0%" stopColor="#f5a0a0" stopOpacity="0.35"/><stop offset="100%" stopColor="#f5a0a0" stopOpacity="0"/>
-                    </radialGradient>
-                    <clipPath id="cc"><circle cx="100" cy="100" r="100"/></clipPath>
-                  </defs>
-                  <g clipPath="url(#cc)">
-                    {/* Background */}
-                    <rect width="200" height="200" fill="url(#bg1)"/>
-                    {/* Blouse / shoulders */}
-                    <ellipse cx="100" cy="198" rx="72" ry="46" fill="#f5e6d3"/>
-                    <ellipse cx="100" cy="198" rx="68" ry="42" fill="#ede0d0"/>
-                    {/* Neck */}
-                    <path d="M86 132 Q88 148 87 156 L113 156 Q112 148 114 132 Z" fill="url(#skin)"/>
-                    {/* Face - slightly turned, soft oval */}
-                    <ellipse cx="100" cy="94" rx="42" ry="48" fill="url(#skin)"/>
-                    {/* Ears */}
-                    <ellipse cx="58" cy="96" rx="6" ry="9" fill="#f0ccb0"/>
-                    <ellipse cx="142" cy="96" rx="6" ry="9" fill="#f0ccb0"/>
-                    {/* Earrings - small gold studs */}
-                    <circle cx="58" cy="104" r="3" fill="#e8c86a"/>
-                    <circle cx="58" cy="104" r="1.5" fill="#f5dc8a" opacity="0.8"/>
-                    <circle cx="142" cy="104" r="3" fill="#e8c86a"/>
-                    <circle cx="142" cy="104" r="1.5" fill="#f5dc8a" opacity="0.8"/>
-                    {/* Hair - voluminous, wavy bob */}
-                    <ellipse cx="100" cy="68" rx="52" ry="42" fill="url(#hg)"/>
-                    {/* Hair sides - soft waves framing face */}
-                    <path d="M48 68 Q44 85 46 105 Q48 115 52 122 Q54 112 52 98 Q50 82 54 68 Z" fill="url(#hg)"/>
-                    <path d="M152 68 Q156 85 154 105 Q152 115 148 122 Q146 112 148 98 Q150 82 146 68 Z" fill="url(#hg)"/>
-                    {/* Hair wave details left */}
-                    <path d="M50 80 Q46 95 50 112 Q52 104 50 92 Z" fill="#1a0d06" opacity="0.4"/>
-                    {/* Hair wave details right */}
-                    <path d="M150 80 Q154 95 150 112 Q148 104 150 92 Z" fill="#1a0d06" opacity="0.4"/>
-                    {/* Hair top volume */}
-                    <path d="M52 72 Q56 40 100 34 Q144 40 148 72 Q144 48 100 42 Q56 48 52 72 Z" fill="url(#hg)"/>
-                    {/* Side-swept bangs */}
-                    <path d="M58 68 Q70 52 96 50 Q86 56 76 62 Q68 66 62 72 Z" fill="url(#hg)"/>
-                    {/* Blush cheeks */}
-                    <circle cx="74" cy="104" r="12" fill="url(#blush)"/>
-                    <circle cx="126" cy="104" r="12" fill="url(#blush)"/>
-                    {/* Eyes - almond shaped, feminine */}
-                    <path d="M78 88 Q84 83 92 88 Q84 90 78 88 Z" fill="white"/>
-                    <path d="M108 88 Q116 83 122 88 Q116 90 108 88 Z" fill="white"/>
-                    <ellipse cx="85" cy="87.5" rx="4" ry="4" fill="#1a1a1a"/>
-                    <ellipse cx="115" cy="87.5" rx="4" ry="4" fill="#1a1a1a"/>
-                    <circle cx="86.5" cy="86.5" r="1.5" fill="white" opacity="0.7"/>
-                    <circle cx="116.5" cy="86.5" r="1.5" fill="white" opacity="0.7"/>
-                    {/* Upper eyelids / lash line */}
-                    <path d="M76 88 Q84 82 93 87" stroke="#1a1a1a" strokeWidth="1.5" fill="none"/>
-                    <path d="M107 87 Q116 82 124 88" stroke="#1a1a1a" strokeWidth="1.5" fill="none"/>
-                    {/* Eyebrows - soft arched */}
-                    <path d="M76 80 Q84 75 94 79" stroke="#2c1810" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
-                    <path d="M106 79 Q116 75 124 80" stroke="#2c1810" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
-                    {/* Nose - delicate */}
-                    <path d="M97 92 Q100 104 96 108 Q100 110 104 108 Q100 104 103 92" stroke="#d4a080" strokeWidth="0.8" fill="none"/>
-                    {/* Lips - warm smile */}
-                    <path d="M86 116 Q93 112 100 114 Q107 112 114 116" stroke="#c47070" strokeWidth="1.2" fill="none"/>
-                    <path d="M86 116 Q100 124 114 116" stroke="#c47070" strokeWidth="1" fill="#e8a0a0" opacity="0.45"/>
-                    {/* Lip highlight */}
-                    <path d="M93 114 Q100 112 107 114" stroke="#d4908a" strokeWidth="0.6" fill="#e8a0a0" opacity="0.3"/>
-                  </g>
-                </svg>
+              <div className="w-full h-full rounded-full border-4 border-white overflow-hidden">
+                <img src="/profile.jpeg" alt="Hazel Hyeseung Kang" className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-lg" style={{ background: C.teal }}>
