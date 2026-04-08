@@ -27,7 +27,7 @@ function Nav({ active, setActive }) {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white bg-opacity-90 backdrop-blur-lg z-50 border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <button onClick={() => setActive("Home")} className="text-2xl md:text-3xl" style={{ background: GRAD.hero, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", fontFamily: "'Snell Roundhand', 'Apple Chancery', 'Brush Script MT', 'Segoe Script', cursive", fontWeight: 700, letterSpacing: "1.5px" }}>Hazel Kang</button>
+        <button onClick={() => setActive("Home")} className="text-2xl md:text-3xl" style={{ background: GRAD.hero, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", fontFamily: "'Snell Roundhand', 'Apple Chancery', 'Brush Script MT', 'Segoe Script', cursive", fontWeight: 700, letterSpacing: "1.5px" }}>hazel kang</button>
         <div className="hidden md:flex gap-8">
           {navItems.map((item) => (
             <button key={item} onClick={() => setActive(item)}
