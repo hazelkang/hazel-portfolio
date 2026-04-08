@@ -27,7 +27,7 @@ function Nav({ active, setActive }) {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white bg-opacity-90 backdrop-blur-lg z-50 border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <button onClick={() => setActive("Home")} className="text-xl" style={{ background: GRAD.hero, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", fontFamily: "'Georgia', 'Times New Roman', serif", fontStyle: "italic", fontWeight: 500, letterSpacing: "0.5px" }}>hazel kang</button>
+        <button onClick={() => setActive("Home")} className="text-xl" style={{ background: GRAD.hero, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", fontFamily: "'Brush Script MT', 'Segoe Script', 'Apple Chancery', cursive", fontWeight: 400, letterSpacing: "1px" }}>hazel kang</button>
         <div className="hidden md:flex gap-8">
           {navItems.map((item) => (
             <button key={item} onClick={() => setActive(item)}
@@ -328,13 +328,13 @@ function Research() {
       summary: "Leads a health-focused study mapping GLP-1 medication (e.g., Ozempic, Wegovy) user personas across 29,000+ Reddit sessions. Applies LLM annotation to classify user discussion patterns, Gaussian Mixture Model (GMM) clustering to identify distinct persona types, and survival analysis to trace how different personas map to medication attrition trajectories over time. Integrates insights from online health communities to understand real-world medication adherence behavior."
     },
     {
-      title: "Effects of Fine Dust on Subjective Well-being of Adolescents: Evidence from South Korea",
+      title: "Air Pollution and Adolescents' Subjective Well-being: Evidence from South Korea",
       authors: [
-        { name: "Yongmi Kim", aff: "KDI" },
+        { name: "Yongmi Kim", aff: "KCCI" },
         { name: "Hazel Hyeseung Kang", me: true, aff: "Boston U" },
         { name: "Youjin Hahn", aff: "Yonsei U" },
       ],
-      status: "In preparation for Applied Research in Quality of Life",
+      status: "Submitted to Ecological Economics",
       color: C.amber,
       icon: Globe,
       summary: "We investigate the effect of exposure to fine dust (PM\u2081\u2080) on subjective well-being of middle and high school students in South Korea. We control for individual fixed effects to rule out issues with residential sorting and unobserved time-invariant differences across individuals. Our findings suggest that the level of PM\u2081\u2080 negatively affects the self-reported subjective well-being level of adolescents, with the effect being more concentrated among students with lower parental education and male students. We also find a non-linear effect, indicating that the negative effect of fine dust becomes weaker with a higher level of concentration.",
