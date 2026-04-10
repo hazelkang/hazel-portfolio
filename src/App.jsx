@@ -262,6 +262,8 @@ function About() {
 
 /* ─── RESEARCH ─── */
 function Research() {
+  const [openAbstracts, setOpenAbstracts] = useState({});
+  const toggleAbstract = (i) => setOpenAbstracts((s) => ({ ...s, [i]: !s[i] }));
   const authorLinks = {
     "Hazel Hyeseung Kang": "https://linkedin.com/in/hazel-hyeseung-kang",
     "Dokyun Lee": "https://www.bu.edu/questrom/profiles/dokyun-dk-lee/",
@@ -310,7 +312,8 @@ function Research() {
       status: "Working paper",
       color: C.teal,
       icon: MessageSquare,
-      summary: "Although pathos (emotional language) has been extensively explored in marketing and consumer behavior literature, logos (rational language) has not been due to the resource-intensive process of annotation. We use state-of-the-art large language models and the double machine learning framework to prompt and causally identify which logos tactics work best in the context of consumer evaluation and persuasion, controlling for high-dimensional text data. Our research considers heterogeneity in consumer motivation. Results reveal that logos has a greater impact on persuasion than pathos, with the argument from analogy being the most persuasive tactic. These findings provide new insights into the application of theoretical models in large-scale text data analysis and highlight the potential for firms to enhance their marketing strategies through tailored argumentation. Presented at INFORMS Data Science Workshop (Seattle, 2024) and INFORMS Annual Meeting (Phoenix, 2023)."
+      summary: "Although pathos (emotional language) has been extensively explored in marketing and consumer behavior literature, logos (rational language) has not been due to the resource-intensive process of annotation. We use state-of-the-art large language models and the double machine learning framework to prompt and causally identify which logos tactics work best in the context of consumer evaluation and persuasion, controlling for high-dimensional text data. Our research considers heterogeneity in consumer motivation. Results reveal that logos has a greater impact on persuasion than pathos, with the argument from analogy being the most persuasive tactic. These findings provide new insights into the application of theoretical models in large-scale text data analysis and highlight the potential for firms to enhance their marketing strategies through tailored argumentation.",
+      presentedAt: ["INFORMS Data Science Workshop (Seattle, 2024)", "INFORMS Annual Meeting (Phoenix, 2023)"]
     },
     {
       title: "Mapping GLP-1 User Personas to Attrition Trajectories: Evidence from Online Health Communities",
@@ -376,22 +379,45 @@ function Research() {
           <BookOpen size={16} /> Working Papers
         </h3>
         <div className="space-y-5 mb-14">
-          {papers.map((p, i) => (
-            <Card key={i} accent={p.color}>
-              <div className="flex gap-4">
-                <IconCircle Icon={p.icon} color={p.color} size={44} />
-                <div className="flex-1">
-                  <p className="font-semibold leading-snug" style={{ color: C.slate }}>{p.title}</p>
-                  <div className="mt-1"><AuthorList authors={p.authors} /></div>
-                  <p className="text-gray-600 text-sm mt-3 leading-relaxed">{p.summary}</p>
-                  <div className="flex items-center gap-3 mt-3 flex-wrap">
-                    <span className="inline-block text-xs font-medium px-3 py-1 rounded-full" style={{ background: p.color + "15", color: p.color }}>{p.status}</span>
-                    {p.link && <a href={p.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs font-medium px-3 py-1 rounded-full hover:opacity-80 transition-opacity" style={{ background: p.color, color: "white" }}><BookOpen size={12} /> View Slides</a>}
+          {papers.map((p, i) => {
+            const isOpen = !!openAbstracts[i];
+            return (
+              <Card key={i} accent={p.color}>
+                <div className="flex gap-4">
+                  <IconCircle Icon={p.icon} color={p.color} size={44} />
+                  <div className="flex-1">
+                    <p className="font-semibold leading-snug" style={{ color: C.slate }}>{p.title}</p>
+                    <div className="mt-1"><AuthorList authors={p.authors} /></div>
+                    <button
+                      onClick={() => toggleAbstract(i)}
+                      className="mt-3 inline-flex items-center gap-1 text-xs font-medium hover:opacity-80 transition-opacity"
+                      style={{ color: p.color }}
+                    >
+                      {isOpen ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
+                      {isOpen ? "Hide Abstract" : "Show Abstract"}
+                    </button>
+                    {isOpen && (
+                      <p className="text-gray-600 text-sm mt-2 leading-relaxed">{p.summary}</p>
+                    )}
+                    {p.presentedAt && (
+                      <div className="mt-3 p-3 rounded-xl" style={{ background: p.color + "0A" }}>
+                        <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: p.color }}>🎤 Presented at</p>
+                        <ul className="text-gray-600 text-sm leading-relaxed space-y-0.5">
+                          {p.presentedAt.map((venue, j) => (
+                            <li key={j}>• {venue}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    <div className="flex items-center gap-3 mt-3 flex-wrap">
+                      <span className="inline-block text-xs font-medium px-3 py-1 rounded-full" style={{ background: p.color + "15", color: p.color }}>{p.status}</span>
+                      {p.link && <a href={p.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs font-medium px-3 py-1 rounded-full hover:opacity-80 transition-opacity" style={{ background: p.color, color: "white" }}><BookOpen size={12} /> View Slides</a>}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Card>
-          ))}
+              </Card>
+            );
+          })}
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
