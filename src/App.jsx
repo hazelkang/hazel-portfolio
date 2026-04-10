@@ -341,7 +341,7 @@ function Research() {
       color: C.amber,
       icon: Globe,
       summary: "We investigate the effect of exposure to fine dust (PM\u2081\u2080) on subjective well-being of middle and high school students in South Korea. We control for individual fixed effects to rule out issues with residential sorting and unobserved time-invariant differences across individuals. Our findings suggest that the level of PM\u2081\u2080 negatively affects the self-reported subjective well-being level of adolescents, with the effect being more concentrated among students with lower parental education and male students. We also find a non-linear effect, indicating that the negative effect of fine dust becomes weaker with a higher level of concentration.",
-      link: "/Korea_Pollution_SWB_Paper.pdf"
+      link: "/Fine_Dust_Slides_KER_2024.pdf"
     },
   ];
   const talks = [
