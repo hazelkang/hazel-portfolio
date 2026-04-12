@@ -292,55 +292,55 @@ function Research() {
   );
   const papers = [
     {
+      title: "Quantifying Persuasion: A Logos vs. Pathos Analysis Leveraging LLMs in Consumer Evaluation",
+      authors: [
+        { name: "Hazel Hyeseung Kang", me: true },
+        { name: "Dokyun Lee" },
+      ],
+      status: "Job Market Paper. In Preparation for Submission to Information Systems Research",
+      color: C.teal,
+      icon: MessageSquare,
+      summary: "This paper investigates how logical versus emotional persuasion tactics shape consumer deliberation about major brands, using a novel dataset of Reddit r/ChangeMyView debates mentioning Forbes Global Top 100 companies. We leverage state-of-the-art large language models (GPT-4.1, GPT-5.4, Llama 4) to annotate logos (e.g., logical reasoning, evidence, analogy) and pathos (e.g., emotional appeals) at scale, and apply double machine learning with high-dimensional text controls to causally estimate the effect of each rhetorical tactic on persuasion (measured by awarded \u201Cdelta\u201D badges). We further examine how logos and pathos interact with the nature of the consumption debate: discussions anchored in product quality and objective performance standards (durability, efficacy, technical specifications) versus product fit and idiosyncratic consumer preferences (lifestyle match, aesthetic alignment, identity). Results reveal that logos outperforms pathos overall, with argument from analogy emerging as the most persuasive tactic\u2014particularly in quality-oriented debates. In fit-oriented debates, pathos and logos work in combination. For brand managers, AI content strategists, and platform designers, these findings provide a concrete playbook for calibrating AI-generated persuasive content to consumer decision contexts.",
+      presentedAt: ["INFORMS Data Science Workshop (Seattle, 2024)", "INFORMS Annual Meeting (Phoenix, 2023)"]
+    },
+    {
       title: "When Expertise Hurts: Uncovering Costs of Reputation Systems with LLMs",
       authors: [
         { name: "Hazel Hyeseung Kang", me: true },
         { name: "Dokyun Lee" },
         { name: "Emaad Manzoor" },
       ],
-      status: "In preparation for Management Science",
+      status: "In Preparation for Submission to Management Science",
       color: C.indigo,
       icon: Award,
-      summary: "We conduct a randomized field experiment on Reddit's r/ChangeMyView, concealing reputation badges for half of 19,965 users across 17,336 persuasion attempts. Using large language models to classify debate content, we find that reputation effects depend on argumentative context: high-status contributors lose persuasive power in subjective debates and when encountering personal experience, while mid-status contributors gain. We identify this as cognitive entrenchment \u2014 reputation systems train high-status members toward analytical rigor that backfires when empathy and perspective-taking matter, undermining deliberation's core purpose of fostering mutual understanding."
+      summary: "We conduct a randomized field experiment on Reddit\u2019s r/ChangeMyView, concealing reputation badges for half of 19,965 users across 17,336 persuasion attempts. Drawing on the conflict and negotiation literature distinguishing value-based conflicts (anchored in principles and identity) from utility-based conflicts (anchored in costs, trade-offs, and outcomes), we use LLM pipelines (GPT-4.1, GPT-5.4, Llama 4) to classify each debate by its value- versus utility-based character at scale. Reputation effects depend on this context: high-status contributors lose persuasive power in value-based debates requiring empathy, while mid-status contributors gain. For platform designers, these findings demonstrate that status signals intended to improve information quality can paradoxically suppress high-quality contributions from emerging voices\u2014suggesting dynamic, context-sensitive reputation displays may outperform static badge systems."
     },
     {
-      title: "Quantifying Persuasion: A Logos vs. Pathos Analysis Leveraging LLMs in Consumer Evaluation",
-      authors: [
-        { name: "Hazel Hyeseung Kang", me: true },
-        { name: "Dokyun Lee" },
-      ],
-      status: "Working paper",
-      color: C.teal,
-      icon: MessageSquare,
-      summary: "Although pathos (emotional language) has been extensively explored in marketing and consumer behavior literature, logos (rational language) has not been due to the resource-intensive process of annotation. We use state-of-the-art large language models and the double machine learning framework to prompt and causally identify which logos tactics work best in the context of consumer evaluation and persuasion, controlling for high-dimensional text data. Our research considers heterogeneity in consumer motivation. Results reveal that logos has a greater impact on persuasion than pathos, with the argument from analogy being the most persuasive tactic. These findings provide new insights into the application of theoretical models in large-scale text data analysis and highlight the potential for firms to enhance their marketing strategies through tailored argumentation.",
-      presentedAt: ["INFORMS Data Science Workshop (Seattle, 2024)", "INFORMS Annual Meeting (Phoenix, 2023)"]
-    },
-    {
-      title: "Mapping GLP-1 User Personas to Attrition Trajectories: Evidence from Online Health Communities",
+      title: "What Receives Community Endorsement in Online Health Communities? Evidence from GLP-1 Discussions on Reddit",
       authors: [
         { name: "Hazel Hyeseung Kang", me: true },
         { name: "Dokyun Lee" },
         { name: "Avi Seidmann" },
-        { name: "Kathleen M. Jagodnik" },
+        { name: "Kathleen Jagodnik" },
         { name: "Alon Bartal" },
         { name: "Ganni Galea Curmi" },
       ],
-      status: "In data analysis",
+      status: "Working Paper. In Preparation for Submission to the Journal of Medical Internet Research",
       color: C.coral,
       icon: Users,
-      summary: "Leads a health-focused study mapping GLP-1 medication (e.g., Ozempic, Wegovy) user personas across 29,000+ Reddit sessions. Applies LLM annotation to classify user discussion patterns, Gaussian Mixture Model (GMM) clustering to identify distinct persona types, and survival analysis to trace how different personas map to medication attrition trajectories over time. Integrates insights from online health communities to understand real-world medication adherence behavior."
+      summary: "This paper examines how rhetorical content in peer replies predicts community endorsement in online health communities. Using large language models (Gemini 2.5), we annotate 254,561 top-level replies across six GLP-1 subreddits for rhetorical tactics (logos, pathos, ethos), discursive intent, and clinical content. Drawing on patient-work theory, we classify posts into three communicative modes\u2014clinical help-seeking, instrumental help-seeking, and experience-sharing\u2014and estimate regressions on within-thread upvote rank. Each mode carries a distinct rhetorical signature: clinical questions reward mechanism and professional credentialing, instrumental questions reward affective solidarity through encouragement and sardonic humor directed at institutional actors, and experience-sharing rewards validation through evidence, numerical contextualization, and personally-grounded encouragement. The paper informs platform guidance for online health communities on which communicative patterns to surface and amplify."
     },
     {
-      title: "Air Pollution and Adolescents' Subjective Well-being: Evidence from South Korea",
+      title: "Air Pollution and Adolescents\u2019 Subjective Well-being: Evidence from South Korea",
       authors: [
         { name: "Yongmi Kim", aff: "KCCI" },
         { name: "Hazel Hyeseung Kang", me: true, aff: "Boston U" },
         { name: "Youjin Hahn", aff: "Yonsei U" },
       ],
-      status: "Submitted to Economics and Human Biology",
+      status: "In Review at Economics and Human Biology",
       color: C.amber,
       icon: Globe,
-      summary: "We investigate the effect of exposure to fine dust (PM\u2081\u2080) on subjective well-being of middle and high school students in South Korea. We control for individual fixed effects to rule out issues with residential sorting and unobserved time-invariant differences across individuals. Our findings suggest that the level of PM\u2081\u2080 negatively affects the self-reported subjective well-being level of adolescents, with the effect being more concentrated among students with lower parental education and male students. We also find a non-linear effect, indicating that the negative effect of fine dust becomes weaker with a higher level of concentration.",
+      summary: "We investigate the effect of exposure to particulate matter (PM\u2081\u2080) on subjective well-being of middle and high school students in South Korea, controlling for individual fixed effects to rule out residential sorting and unobserved time-invariant differences. PM\u2081\u2080 negatively affects self-reported adolescent well-being, with effects concentrated among students from low-income households and male students. We also find a non-linear effect: the negative impact weakens at higher concentration levels, possibly due to avoidance behavior.",
       link: "/Fine_Dust_Slides_KER_2024.pdf"
     },
   ];
@@ -1308,7 +1308,7 @@ function Experience() {
       bullets: [
         "Designed qualitative annotation frameworks grounded in rhetorical theory to classify persuasion strategies across 19,965 users and 17,336 debate attempts",
         "Built end-to-end LLM classification pipelines using Claude, OpenAI, and Google APIs",
-        "Leading a health-focused study mapping GLP-1 user personas across 29,000+ Reddit sessions",
+        "Leading a health-focused study annotating 254,561 replies across six GLP-1 subreddits using LLMs for rhetorical and clinical content analysis",
         "Awarded OpenAI Research Grant ($5,000) and Google Cloud Academic Program Credit ($10,000)",
       ]
     },
