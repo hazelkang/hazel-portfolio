@@ -297,26 +297,29 @@ function Research() {
         { name: "Hazel Hyeseung Kang", me: true },
         { name: "Dokyun Lee" },
       ],
-      status: "Job Market Paper. In Preparation for Submission to Information Systems Research",
+      status: "Job Market Paper",
+      substatus: "In Preparation for Submission to Management Science",
       color: C.teal,
       icon: MessageSquare,
-      summary: "This paper investigates how logical versus emotional persuasion tactics shape consumer deliberation about major brands, using a novel dataset of Reddit r/ChangeMyView debates mentioning Forbes Global Top 100 companies. We leverage state-of-the-art large language models (GPT-4.1, GPT-5.4, Llama 4) to annotate logos (e.g., logical reasoning, evidence, analogy) and pathos (e.g., emotional appeals) at scale, and apply double machine learning with high-dimensional text controls to causally estimate the effect of each rhetorical tactic on persuasion (measured by awarded \u201Cdelta\u201D badges). We further examine how logos and pathos interact with the nature of the consumption debate: discussions anchored in product quality and objective performance standards (durability, efficacy, technical specifications) versus product fit and idiosyncratic consumer preferences (lifestyle match, aesthetic alignment, identity). Results reveal that logos outperforms pathos overall, with argument from analogy emerging as the most persuasive tactic\u2014particularly in quality-oriented debates. In fit-oriented debates, pathos and logos work in combination. For brand managers, AI content strategists, and platform designers, these findings provide a concrete playbook for calibrating AI-generated persuasive content to consumer decision contexts.",
+      summary: "Consumers increasingly evaluate products and brands through extended online conversations rather than passive exposure to short persuasive messages. We study how the architecture of persuasive communication\u2014how reasoning and emotion are structurally combined within an argument\u2014shapes persuasion in these deliberative settings. Using 4,332 challenger comments from consumer-brand debates on Reddit\u2019s r/ChangeMyView, we use large language models to recover each comment\u2019s argument structure, identifying both reasoning schemes and emotional appraisals embedded within the argument. We then estimate effects on persuasion using inverse-propensity weighting and double machine learning. We find that persuasive success depends less on the total amount of rational or emotional content than on its structural position. The volume of reasoning does not predict persuasion. Emotional volume does, but only because emotion is persuasive when integrated into supporting reasoning beneath a claim. Emotional appraisal anchored to supporting reasoning increases persuasion by approximately 0.5 percentage points, a 16% relative increase over the 3.32% baseline rate; the development of supporting reasoning itself increases persuasion by approximately 0.8 percentage points, or 23% relative to baseline. By contrast, emotional appraisal attached directly to the contested claim has no effect. At the scheme level, explicitly oppositional counter-thesis framing reduces persuasion, while pairing concrete examples with first-hand witness testimony increases it, especially in debates over externally verifiable product quality. Together, the findings show that effective persuasion in consumer deliberation depends not on choosing between rational and emotional appeals, but on integrating affect into the reasoning that supports a claim.",
       presentedAt: ["INFORMS Data Science Workshop (Seattle, 2024)", "INFORMS Annual Meeting (Phoenix, 2023)"]
     },
     {
-      title: "When Expertise Hurts: Uncovering Costs of Reputation Systems with LLMs",
+      title: "How Visible Status Shapes Persuasion and Engagement in Online Deliberation: Evidence from a Field Experiment",
       authors: [
         { name: "Hazel Hyeseung Kang", me: true },
         { name: "Dokyun Lee" },
         { name: "Emaad Manzoor" },
       ],
-      status: "In Preparation for Submission to Management Science",
+      status: "Working Paper",
+      substatus: "In Preparation for Submission to Management Science",
       color: C.indigo,
       icon: Award,
-      summary: "We conduct a randomized field experiment on Reddit\u2019s r/ChangeMyView, concealing reputation badges for half of 19,965 users across 17,336 persuasion attempts. Drawing on the conflict and negotiation literature distinguishing value-based conflicts (anchored in principles and identity) from utility-based conflicts (anchored in costs, trade-offs, and outcomes), we use LLM pipelines (GPT-4.1, GPT-5.4, Llama 4) to classify each debate by its value- versus utility-based character at scale. Reputation effects depend on this context: high-status contributors lose persuasive power in value-based debates requiring empathy, while mid-status contributors gain. For platform designers, these findings demonstrate that status signals intended to improve information quality can paradoxically suppress high-quality contributions from emerging voices\u2014suggesting dynamic, context-sensitive reputation displays may outperform static badge systems."
+      summary: "User-generated content platforms rely on reputation systems to motivate contribution and help audiences evaluate quality, yet causal evidence remains limited on how visible status shapes audience responses during online deliberation. We study this using a randomized field experiment on Reddit\u2019s r/ChangeMyView, concealing status signals for a sample of 19,965 contributors. Visible status increases persuasion primarily in value-driven discussions\u2014where positions reflect personal values, beliefs, or lived experience rather than verifiable facts\u2014and the effect is concentrated among high-status contributors. Status also changes the amount and nature of discussion through a non-monotonic, tiered response: low-to-moderate status prompts probing, mid-level status suppresses substantive engagement, high status sustains back-and-forth exchange, and top-tier status elicits accommodation. In value-driven discussions, status increases substantive engagement and produces belief change; in utility-driven discussions, status increases relational engagement and accommodation without comparable persuasion. Reputation systems thus operate as two distinct design levers\u2014a persuasion lever activated in value-driven contexts through substantive engagement, and a bonding lever activated in utility-driven contexts through relational engagement\u2014informing how platforms can design status infrastructure to support deliberation and human-to-human engagement in the age of generative AI.",
+      presentedAt: ["HICSS-60 (2027)"]
     },
     {
-      title: "What Receives Community Endorsement in Online Health Communities? Evidence from GLP-1 Discussions on Reddit",
+      title: "Behavioral Signatures of Treatment Engagement, Discontinuation, and Restart in GLP-1 Online Communities: Evidence from Reddit",
       authors: [
         { name: "Hazel Hyeseung Kang", me: true },
         { name: "Dokyun Lee" },
@@ -325,10 +328,11 @@ function Research() {
         { name: "Alon Bartal" },
         { name: "Ganni Galea Curmi" },
       ],
-      status: "Working Paper. In Preparation for Submission to the Journal of Medical Internet Research",
+      status: "Working Paper",
+      substatus: "In Preparation for Submission to Journal of Medical Internet Research",
       color: C.coral,
       icon: Users,
-      summary: "This paper examines how rhetorical content in peer replies predicts community endorsement in online health communities. Using large language models (Gemini 2.5), we annotate 254,561 top-level replies across six GLP-1 subreddits for rhetorical tactics (logos, pathos, ethos), discursive intent, and clinical content. Drawing on patient-work theory, we classify posts into three communicative modes\u2014clinical help-seeking, instrumental help-seeking, and experience-sharing\u2014and estimate regressions on within-thread upvote rank. Each mode carries a distinct rhetorical signature: clinical questions reward mechanism and professional credentialing, instrumental questions reward affective solidarity through encouragement and sardonic humor directed at institutional actors, and experience-sharing rewards validation through evidence, numerical contextualization, and personally-grounded encouragement. The paper informs platform guidance for online health communities on which communicative patterns to surface and amplify."
+      summary: "Online health communities for GLP-1 receptor agonists, including semaglutide and tirzepatide, host millions of treatment-related discussions on Reddit. Prior research has linked community support to engagement, but the relationship between community discourse and observable treatment trajectories remains unclear. We analyze 113,064 active participants and approximately 3 million posts and comments from major GLP-1 subreddits, using large language model annotation (Gemini 2.5 Pro) to tag twelve rhetorical sub-tactics and eleven comment-type categories. Across three user-level outcomes\u2014staying engaged in the community (N = 11,572), continuing the drug versus posting about quitting (N = 7,862), and restarting the drug after quitting (N = 1,081)\u2014we apply regression, machine-learning prediction, and qualitative trajectory review. First, on community engagement: users who give to the community by writing encouragement, sharing their experience, and engaging in supportive comment threads stay engaged. Users who actively manage their treatment by posting brand-change or comparison questions also stay engaged on the OHC. Second, on continued treatment versus quitting: users heading toward posting about quitting show identifiable behavioral signatures in their own writing well before the quit-post appears. Personal-frustration language about treatment progress is the most defensible leading indicator, while users actively asking brand-change questions or posting structured treatment experiences tend to continue. Third, on restarting the drug after quitting: the content that helps users return depends on why they originally stopped\u2014mechanistic explanations help side-effect-driven users restart, practical workarounds help cost or supply-driven users restart, and concrete numeric framing helps no-benefit-driven users restart. The choice to return to the original drug versus switch to another GLP-1 is fast\u2014it crystallizes within seven days of the quit-post\u2014meaning the community\u2019s immediate-thread response is decisive. Our results have implications for OHC platform managers and clinicians managing patients across the continuum of distress, continuance, and restart: behavioral signatures in users\u2019 own posts can flag those at risk of quitting before they announce it, and reason-specific content patterns can guide what advice helps when users are distressed and considering stopping, or considering returning after they have stopped."
     },
     {
       title: "Air Pollution and Adolescents\u2019 Subjective Well-being: Evidence from South Korea",
@@ -337,7 +341,8 @@ function Research() {
         { name: "Hazel Hyeseung Kang", me: true, aff: "Boston U" },
         { name: "Youjin Hahn", aff: "Yonsei U" },
       ],
-      status: "In Review at Economics and Human Biology",
+      status: "Revise & Resubmit",
+      substatus: "Economics and Human Biology",
       color: C.amber,
       icon: Globe,
       summary: "We investigate the effect of exposure to particulate matter (PM\u2081\u2080) on subjective well-being of middle and high school students in South Korea, controlling for individual fixed effects to rule out residential sorting and unobserved time-invariant differences. PM\u2081\u2080 negatively affects self-reported adolescent well-being, with effects concentrated among students from low-income households and male students. We also find a non-linear effect: the negative impact weakens at higher concentration levels, possibly due to avoidance behavior.",
@@ -411,6 +416,7 @@ function Research() {
                     )}
                     <div className="flex items-center gap-3 mt-3 flex-wrap">
                       <span className="inline-block text-xs font-medium px-3 py-1 rounded-full" style={{ background: p.color + "15", color: p.color }}>{p.status}</span>
+                      {p.substatus && <span className="inline-block text-xs px-3 py-1 rounded-full" style={{ background: "#f1f5f9", color: C.slateLight }}>{p.substatus}</span>}
                       {p.link && <a href={p.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs font-medium px-3 py-1 rounded-full hover:opacity-80 transition-opacity" style={{ background: p.color, color: "white" }}><BookOpen size={12} /> View Slides</a>}
                     </div>
                   </div>
