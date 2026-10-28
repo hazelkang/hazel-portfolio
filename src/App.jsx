@@ -552,7 +552,7 @@ function Research() {
               {[
                 { name: "OpenAI Research Grant", amount: "$5,000", color: C.indigo },
                 { name: "Google Cloud Credit (Gemma 2)", amount: "$10,000", color: C.teal },
-                { name: "Questrom PhD Conference Funding", amount: "2023–24", color: C.violet },
+                { name: "Questrom PhD Conference Funding", amount: "2023–26", color: C.violet },
                 { name: "BK21 Graduate Scholarship, Yonsei", amount: "2015–16", color: C.amber },
               ].map((g, i) => (
                 <div key={i} className="flex items-center justify-between p-3 rounded-xl" style={{ background: g.color + "08" }}>
