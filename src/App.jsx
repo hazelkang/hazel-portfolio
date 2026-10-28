@@ -300,6 +300,7 @@ function Research() {
         { name: "Youjin Hahn", aff: "Yonsei U" },
       ],
       status: "Revise & Resubmit",
+      draft: true,
       substatus: "Economics and Human Biology",
       color: C.amber,
       icon: Globe,
@@ -311,10 +312,11 @@ function Research() {
       title: "How Visible Status Shapes Persuasion and Engagement in Online Deliberation: Evidence from a Field Experiment",
       authors: [
         { name: "Hazel Hyeseung Kang", me: true },
-        { name: "Dokyun Lee" },
         { name: "Emaad Manzoor" },
+        { name: "Dokyun Lee" },
       ],
       status: "Job Market Paper",
+      draft: true,
       substatus: "Target: Management Science",
       color: C.indigo,
       icon: Award,
@@ -328,6 +330,7 @@ function Research() {
         { name: "Dokyun Lee" },
       ],
       status: "Working Paper",
+      draft: true,
       substatus: "Target: Information Systems Research",
       color: C.teal,
       icon: MessageSquare,
@@ -420,7 +423,6 @@ function Research() {
         <h3 className="text-sm tracking-widest uppercase font-medium mb-6 flex items-center gap-2" style={{ color: C.indigo }}>
           <BookOpen size={16} /> Working Papers
         </h3>
-        <p className="text-gray-400 text-sm italic -mt-4 mb-6">Drafts available upon request.</p>
         <div className="space-y-5 mb-14">
           {papers.map((p, i) => {
             const isOpen = !!openAbstracts[i];
@@ -455,6 +457,7 @@ function Research() {
                     <div className="flex items-center gap-3 mt-3 flex-wrap">
                       <span className="inline-block text-xs font-medium px-3 py-1 rounded-full" style={{ background: p.color + "15", color: p.color }}>{p.status}</span>
                       {p.substatus && <span className="inline-block text-xs px-3 py-1 rounded-full" style={{ background: "#f1f5f9", color: C.slateLight }}>{p.substatus}</span>}
+                      {p.draft && <span className="inline-block text-xs italic px-3 py-1 rounded-full" style={{ background: "#f1f5f9", color: C.slateLight }}>Draft available upon request</span>}
                       {p.link && <a href={p.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs font-medium px-3 py-1 rounded-full hover:opacity-80 transition-opacity" style={{ background: p.color, color: "white" }}><BookOpen size={12} /> View Slides</a>}
                     </div>
                   </div>
@@ -501,6 +504,7 @@ function Research() {
                     <div className="flex items-center gap-3 mt-3 flex-wrap">
                       <span className="inline-block text-xs font-medium px-3 py-1 rounded-full" style={{ background: p.color + "15", color: p.color }}>{p.status}</span>
                       {p.substatus && <span className="inline-block text-xs px-3 py-1 rounded-full" style={{ background: "#f1f5f9", color: C.slateLight }}>{p.substatus}</span>}
+                      {p.draft && <span className="inline-block text-xs italic px-3 py-1 rounded-full" style={{ background: "#f1f5f9", color: C.slateLight }}>Draft available upon request</span>}
                       {p.link && <a href={p.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs font-medium px-3 py-1 rounded-full hover:opacity-80 transition-opacity" style={{ background: p.color, color: "white" }}><BookOpen size={12} /> View Slides</a>}
                     </div>
                   </div>
