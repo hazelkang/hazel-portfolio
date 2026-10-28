@@ -388,6 +388,7 @@ function Research() {
   ];
   const talks = [
     { venue: "Hawaii International Conference on System Sciences (accepted)", location: "Hawaii, USA \u00b7 January", year: "2027", color: C.indigo },
+    { venue: "AMCIS 2026 Doctoral Consortium (Invited Participant)", location: "Reno, NV \u00b7 August", year: "2026", color: C.coral },
     { venue: "HCI International (HCII) 2026", location: "Montreal, Canada \u00b7 July", year: "2026", color: C.violet },
     { venue: "AIS Pre-ECIS Workshop on HCI Research in MIS (SIGHCI)", location: "Milan, Italy \u00b7 June", year: "2026", color: C.violet },
     { venue: "INFORMS Data Science Workshop", location: "Seattle, WA", year: "2024", color: C.indigo },
